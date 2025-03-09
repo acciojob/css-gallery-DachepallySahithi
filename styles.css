@@ -1,13 +1,27 @@
-/*  your css code here. If applicable */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
 .cards {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 10px; 
+  flex-wrap: wrap; /* Allow images to move to the next line */
+  justify-content: flex-start; /* Align items to the start of the row */
+  gap: 10px; /* Space between images */
+  padding: 20px;
 }
 
 .cards img {
-  border: 3px solid #000;
-  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.3);
-  max-width: 25vw; 
-	height:auto;
+  max-width: 25vw; /* Ensure images have a max width of 25% of the viewport width */
+  width: 100%; /* Let images scale up to fill the container but no more than 25vw */
+  border: 3px solid #000; /* Black border around images */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Apply shadow to images */
+  margin: 10px; /* Space around each image */
+  object-fit: cover; /* Ensure images maintain aspect ratio without stretching */
 }
